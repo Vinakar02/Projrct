@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables</title>
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Vegetables</h1>
+        <input type="text" id="search-bar" placeholder="Search..." oninput="searchItems()">
+    </div>
+    
+    <div class="items-container" id="items-container">
+        <div class="item" data-name="Potato">
+            <img src="https://cdn.pixabay.com/photo/2012/12/24/08/39/agriculture-72254_640.jpg" alt="Potato">
+            <h3>Potato</h3>
+            <p>₹50/kg</p>
+            <button onclick="addToCart('Potato', 50)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Potato" style="display: none;">
+                <button onclick="decreaseQuantity('Potato', 50)">-</button>
+                <span id="quantity-Potato">0</span>
+                <button onclick="increaseQuantity('Potato', 50)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Bringal">
+            <img src="https://t4.ftcdn.net/jpg/03/69/98/49/360_F_369984944_mp5bcE534T45okjhprMta7z6ujQlaYXC.jpg" alt="Bringal">
+            <h3>Bringal</h3>
+            <p>₹40/kg</p>
+            <button onclick="addToCart('Bringal', 40)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Bringal" style="display: none;">
+                <button onclick="decreaseQuantity('Bringal', 40)">-</button>
+                <span id="quantity-Bringal">0</span>
+                <button onclick="increaseQuantity('Bringal', 40)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Ladysfinger">
+            <img src="https://thumbs.dreamstime.com/b/lady-finger-fresh-wooden-table-53810833.jpg" alt="Ladysfinger">
+            <h3>Ladysfinger</h3>
+            <p>₹70/kg</p>
+            <button onclick="addToCart('Ladysfinger', 70)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Ladysfinger" style="display: none;">
+                <button onclick="decreaseQuantity('Ladysfinger', 70)">-</button>
+                <span id="quantity-Ladysfinger">0</span>
+                <button onclick="increaseQuantity('Ladysfinger', 70)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Bottle Gourd">
+            <img src="https://t3.ftcdn.net/jpg/04/51/71/04/360_F_451710427_nr8WeVO4k9tnh2QWcFaGv0sGb1kY6Lzb.jpg" alt="Bottle Gourd">
+            <h3>Bottle Gourd</h3>
+            <p>₹30/kg</p>
+            <button onclick="addToCart('Bottle Gourd', 30)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Bottle Gourd" style="display: none;">
+                <button onclick="decreaseQuantity('Bottle Gourd', 30)">-</button>
+                <span id="quantity-Bottle Gourd">0</span>
+                <button onclick="increaseQuantity('Bottle Gourd', 30)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Tomato">
+            <img src="https://c4.wallpaperflare.com/wallpaper/134/1018/397/freshness-rendering-white-background-vegetables-tomatoes-hd-wallpaper-preview.jpg" alt="Tomato">
+            <h3>Tomato</h3>
+            <p>₹80/kg</p>
+            <button onclick="addToCart('Tomato', 80)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Tomato" style="display: none;">
+                <button onclick="decreaseQuantity('Tomato', 80)">-</button>
+                <span id="quantity-Tomato">0</span>
+                <button onclick="increaseQuantity('Tomato', 80)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Cauliflower">
+            <img src="https://previews.123rf.com/images/posinote/posinote1702/posinote170200201/73519102-cauliflower-on-white-background.jpg" alt="Cauliflower">
+            <h3>Cauliflower</h3>
+            <p>₹40/kg</p>
+            <button onclick="addToCart('Cauliflower', 40)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Cauliflower" style="display: none;">
+                <button onclick="decreaseQuantity('Cauliflower', 40)">-</button>
+                <span id="quantity-Cauliflower">0</span>
+                <button onclick="increaseQuantity('Cauliflower', 40)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Cabbage">
+            <img src="https://t3.ftcdn.net/jpg/02/71/01/22/360_F_271012292_5K2Woa1luhxDozTgR34dPhsZi2nrSEmN.jpg" alt="Cabbage">
+            <h3>Cabbage</h3>
+            <p>₹60/kg</p>
+            <button onclick="addToCart('Cabbage', 60)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Cabbage" style="display: none;">
+                <button onclick="decreaseQuantity('Cabbage', 60)">-</button>
+                <span id="quantity-Cabbage">0</span>
+                <button onclick="increaseQuantity('Cabbage', 60)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Onion">
+            <img src="https://cdn.pixabay.com/photo/2020/02/22/08/40/foods-4869862_1280.jpg" alt="Onion">
+            <h3>Onion</h3>
+            <p>₹80/kg</p>
+            <button onclick="addToCart('Onion', 80)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Onion" style="display: none;">
+                <button onclick="decreaseQuantity('Onion', 80)">-</button>
+                <span id="quantity-Onion">0</span>
+                <button onclick="increaseQuantity('Onion', 80)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Cucumber">
+            <img src="https://img.freepik.com/premium-photo/cucumber-vegetable-isolated-white-background_42033-135.jpg" alt="Cucumber">
+            <h3>Cucumber</h3>
+            <p>₹100/kg</p>
+            <button onclick="addToCart('Cucumber', 100)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Cucumber" style="display: none;">
+                <button onclick="decreaseQuantity('Cucumber', 100)">-</button>
+                <span id="quantity-Cucumber">0</span>
+                <button onclick="increaseQuantity('Cucumber', 100)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Raddish">
+            <img src="https://media.istockphoto.com/id/158690297/photo/daikon-radishes-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=k_KVuE_UbE-shIiG2z2xY8Fu7BqKy_bk4D9NfZdrTfM=" alt="Raddish">
+            <h3>Raddish</h3>
+            <p>₹40/kg</p>
+            <button onclick="addToCart('Raddish', 40)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Raddish" style="display: none;">
+                <button onclick="decreaseQuantity('Raddish', 40)">-</button>
+                <span id="quantity-Raddish">0</span>
+                <button onclick="increaseQuantity('Raddish', 40)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Bitter gourd">
+            <img src="https://t3.ftcdn.net/jpg/03/36/29/26/360_F_336292653_D7vlCbHuMvHyoulmj1XweCihlykoEUnI.jpg" alt="Bitter gourd">
+            <h3>Bitter gourd</h3>
+            <p>₹60/kg</p>
+            <button onclick="addToCart('Bitter gourd', 60)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Bitter gourd" style="display: none;">
+                <button onclick="decreaseQuantity('Bitter gourd', 60)">-</button>
+                <span id="quantity-Bitter gourd">0</span>
+                <button onclick="increaseQuantity('Bitter gourd', 60)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Peas">
+            <img src="https://st4.depositphotos.com/10614052/40459/i/450/depositphotos_404592084-stock-photo-tasty-fresh-peas-white-background.jpg" alt="Peas">
+            <h3>Peas</h3>
+            <p>₹80/kg</p>
+            <button onclick="addToCart('Peas', 80)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Peas" style="display: none;">
+                <button onclick="decreaseQuantity('Peas', 80)">-</button>
+                <span id="quantity-Peas">0</span>
+                <button onclick="increaseQuantity('Peas', 80)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Drum Sticks">
+            <img src="https://t3.ftcdn.net/jpg/05/85/66/68/360_F_585666841_9PNi8WG6rn45vYLY54YZGvxLblBVkAvh.jpg" alt="Drum Sticks">
+            <h3>Drum Sticks</h3>
+            <p>₹100/kg</p>
+            <button onclick="addToCart('Drum Sticks', 100)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Drum Sticks" style="display: none;">
+                <button onclick="decreaseQuantity('Drum Sticks', 100)">-</button>
+                <span id="quantity-Drum Sticks">0</span>
+                <button onclick="increaseQuantity('Drum Sticks', 100)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Ridged Gourd">
+            <img src="https://static.vecteezy.com/system/resources/previews/025/010/341/non_2x/fresh-angled-gourd-ridge-gourd-fruits-luffa-acutangula-roxb-isolated-on-white-background-concept-organic-vegetble-can-be-cooked-for-many-delicious-menu-agriculture-crops-in-thailand-photo.jpg" alt="Ridged Gourd">
+            <h3>Ridged Gourd</h3>
+            <p>₹40/kg</p>
+            <button onclick="addToCart('Ridged Gourd', 40)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Ridged Gourd" style="display: none;">
+                <button onclick="decreaseQuantity('Ridged Gourd', 40)">-</button>
+                <span id="quantity-Ridged Gourd">0</span>
+                <button onclick="increaseQuantity('Ridged Gourd', 40)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Curry Leaves">
+            <img src="https://jagsfresh-bucket.s3.amazonaws.com/media/package/img_one/2019-12-24/Curry_Leaves.jpg" alt="Curry Leaves">
+            <h3>Curry Leaves</h3>
+            <p>₹60/kg</p>
+            <button onclick="addToCart('Curry Leaves', 60)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Curry Leavess" style="display: none;">
+                <button onclick="decreaseQuantity('Curry Leaves', 60)">-</button>
+                <span id="quantity-Curry Leaves">0</span>
+                <button onclick="increaseQuantity('Curry Leaves', 60)">+</button>
+            </div>
+        </div>
+         
+        <div class="item" data-name="Spinach">
+            <img src="https://t3.ftcdn.net/jpg/07/54/88/04/360_F_754880471_JqQAOrfXSUZpRgtPl5D2uMbiUgsfkAlA.jpg" alt="Spinach">
+            <h3>Spinach</h3>
+            <p>₹50/kg</p>
+            <button onclick="addToCart('Spinach', 50)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Spinach" style="display: none;">
+                <button onclick="decreaseQuantity('Spinach', 50)">-</button>
+                <span id="quantity-Spinach">0</span>
+                <button onclick="increaseQuantity('Spinach', 50)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Mirchi">
+            <img src="https://i.pinimg.com/originals/3c/42/5a/3c425a418d2c6b4670ee7d47c799a80d.png" alt="Mirchi">
+            <h3>Mirchi</h3>
+            <p>₹40/500g</p>
+            <button onclick="addToCart('Mirchi', 40)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Mirchi" style="display: none;">
+                <button onclick="decreaseQuantity('Mirchi', 40)">-</button>
+                <span id="quantity-Mirchi">0</span>
+                <button onclick="increaseQuantity('Mirchi', 40)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Broccoli">
+            <img src="https://previews.123rf.com/images/ellaa44/ellaa441404/ellaa44140400036/27545499-broccoli-vegetable-isolated-on-white-background.jpg" alt="Broccoli">
+            <h3>Broccoli</h3>
+            <p>₹60/kg</p>
+            <button onclick="addToCart('Broccoli', 60)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Broccoli" style="display: none;">
+                <button onclick="decreaseQuantity('Broccoli', 60)">-</button>
+                <span id="quantity-Broccoli">0</span>
+                <button onclick="increaseQuantity('Broccoli', 60)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Garlic">
+            <img src="https://img.freepik.com/premium-photo/fresh-garlic-white-background_33900-6279.jpg" alt="Garlic">
+            <h3>Garlic</h3>
+            <p>₹80/kg</p>
+            <button onclick="addToCart('Garlic', 80)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Garlic" style="display: none;">
+                <button onclick="decreaseQuantity('Garlice', 80)">-</button>
+                <span id="quantity-Garlic">0</span>
+                <button onclick="increaseQuantity('Garlic', 80)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Coriander">
+            <img src="https://png.pngtree.com/background/20220723/original/pngtree-green-organic-fresh-vegetable-coriander-picture-image_1722499.jpg" alt="Coriander">
+            <h3>Coriander</h3>
+            <p>₹10/500g</p>
+            <button onclick="addToCart('Coriander', 10)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Coriander" style="display: none;">
+                <button onclick="decreaseQuantity('Coriander', 10)">-</button>
+                <span id="quantity-Coriander">0</span>
+                <button onclick="increaseQuantity('Coriander', 10)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Pumpkin">
+            <img src="https://cdn.cdkitchen.com/images/cats/753/cat-753-720-1.jpg" alt="Pumpkin">
+            <h3>Pumpkin</h3>
+            <p>₹50/kg</p>
+            <button onclick="addToCart('Pumpkin', 50)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Pumpkin" style="display: none;">
+                <button onclick="decreaseQuantity('Pumpkin', 50)">-</button>
+                <span id="quantity-Pumpkin">0</span>
+                <button onclick="increaseQuantity('Pumpkin', 50)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Carrot">
+            <img src="https://t4.ftcdn.net/jpg/00/80/96/17/360_F_80961739_hep1UZaQRsy5WQOYU3jkOr5CB7A6xc3U.jpg" alt="Carrot">
+            <h3>Carrot</h3>
+            <p>₹60/kg</p>
+            <button onclick="addToCart('Carrot', 60)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Carrot" style="display: none;">
+                <button onclick="decreaseQuantity('Carrot', 60)">-</button>
+                <span id="quantity-Carrot">0</span>
+                <button onclick="increaseQuantity('Carrot', 60)">+</button>
+            </div>
+        </div>
+        <div class="item" data-name="Egg Plant">
+            <img src="https://media.istockphoto.com/id/510515443/photo/eggplant-isolated-on-white.jpg?s=612x612&w=0&k=20&c=AfRLY-0SanZ7Xo1Vdgpdv--PmAbKOdPUiLtvw4X8YJY=" alt="Egg Plant">
+            <h3>Egg Plant</h3>
+            <p>₹80/kg</p>
+            <button onclick="addToCart('Egg Plant', 80)">Add to Cart</button>
+            <div class="quantity-controls" id="quantity-controls-Egg Plant" style="display: none;">
+                <button onclick="decreaseQuantity('Egg Plant', 80)">-</button>
+                <span id="quantity-Egg Plant">0</span>
+                <button onclick="increaseQuantity('Egg Plant', 80)">+</button>
+            </div>
+        </div>
+         
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-button" onclick="goHome()">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+         
+        <div class="nav-button" onclick="viewCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.forEach(item => {
+                document.getElementById('quantity-' + item.name).textContent = item.quantity;
+                document.getElementById('quantity-controls-' + item.name).style.display = 'flex';
+                document.querySelector('[data-name="' + item.name + '"] button').style.display = 'none';
+            });
+        });
+
+        function addToCart(name, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            document.getElementById('quantity-' + name).textContent = cart.find(item => item.name === name).quantity;
+            document.getElementById('quantity-controls-' + name).style.display = 'flex';
+            document.querySelector('[data-name="' + name + '"] button').style.display = 'none';
+        }
+
+        function increaseQuantity(name, price) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            document.getElementById('quantity-' + name).textContent = cart.find(item => item.name === name).quantity;
+        }
+
+        function decreaseQuantity(name) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity--;
+                if (item.quantity <= 0) {
+                    const index = cart.indexOf(item);
+                    cart.splice(index, 1);
+                    document.getElementById('quantity-controls-' + name).style.display = 'none';
+                    document.querySelector('[data-name="' + name + '"] button').style.display = 'inline-block';
+                }
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            const quantityElement = document.getElementById('quantity-' + name);
+            quantityElement.textContent = item ? item.quantity : 0;
+        }
+
+        function searchItems() {
+            const query = document.getElementById('search-bar').value.toLowerCase();
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                const text = item.dataset.name.toLowerCase();
+                item.style.display = text.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+
+        
+
+        function viewCart() {
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #c03;
+    align-items: center;
+    padding-bottom: 60px; /* Prevents bottom content from being covered */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    width: 100%;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#search-icon:hover {
+    transform: scale(1.1);
+}
+
+#search-input {
+    display: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.item {
+    border: 5px solid white;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item img:hover {
+    transform: scale(1.1);
+}
+ 
+.item p{
+    text-align: center;
+    align-content: first baseline;
+}
+
+.item button {
+    background-color: white;
+    text-emphasis-color: black;
+    width: 80%;
+    border: 1px solid rgb(205, 19, 19);
+    align-items: last baseline;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item button:hover {
+    
+    transform: scale(1.1);
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.quantity-controls button {
+    background-color: #f6f2f2;
+    border: 1px solid red;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.quantity-controls button:hover {
+    transform: scale(1.1);
+}
+
+.quantity-controls span {
+    margin: 0 10px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fa;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.bottom-nav .nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bottom-nav .nav-button:hover {
+    transform: scale(1.1);
+}
+
+.bottom-nav .nav-button i {
+    font-size: 20px;
+}
+
+.bottom-nav .nav-button span {
+    font-size: 12px;
+}
